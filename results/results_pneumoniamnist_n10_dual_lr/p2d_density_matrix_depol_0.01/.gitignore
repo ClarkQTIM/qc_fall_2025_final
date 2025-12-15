@@ -1,0 +1,11 @@
+# Model checkpoints / weights
+*.pth
+*.pt
+*.ckpt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS / editor junk
+.DS_Store

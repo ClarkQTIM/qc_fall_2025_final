@@ -1,0 +1,189 @@
+{
+    "Test 1": {
+        "test_1a": {
+            "test": "P1 vs P3 (no noise)",
+            "p1_config": "dropout_0.0",
+            "p1_mean": 0.9375483965227556,
+            "p1_std": 0.004844770056097907,
+            "p1_n": 10,
+            "p3_mean": 0.665399225655636,
+            "p3_std": 0.07088927739160038,
+            "p3_n": 10,
+            "t_statistic": 12.111964525088627,
+            "p_value": 4.3450583250194814e-10,
+            "cohens_d": 5.416635203832825,
+            "significant": "True"
+        },
+        "test_1b": {
+            "test": "P1 vs P3 (best)",
+            "p1_config": "dropout_0.0",
+            "p1_mean": 0.9375483965227556,
+            "p1_std": 0.004844770056097907,
+            "p1_n": 10,
+            "p3_config": "bit_flip_0.01",
+            "p3_mean": 0.7197914383811821,
+            "p3_std": 0.06595776732656877,
+            "p3_n": 10,
+            "t_statistic": 10.412084227785217,
+            "p_value": 4.7803879405236e-09,
+            "cohens_d": 4.656425624156229,
+            "significant": "True"
+        }
+    },
+    "Test 2": {
+        "test": "P2 variants",
+        "t_statistic": -2.89068163889213,
+        "p_value": 0.00973937896977305,
+        "significant": "True",
+        "summary": [
+            {
+                "method": "P2a (Probabilities)",
+                "mean": 0.8553126597998393,
+                "std": 0.06855671739617968,
+                "n": 10
+            },
+            {
+                "method": "P2b (Complex Amplitudes)",
+                "mean": 0.9186865366352548,
+                "std": 0.010313958566929952,
+                "n": 10
+            }
+        ]
+    },
+    "Test 3": {
+        "amp_damp": {
+            "noise_type": "amp_damp",
+            "optimal_level": 0.03,
+            "optimal_auc": 0.9398440353568558,
+            "f_statistic": 0.4379064556204123,
+            "p_value": 0.7804428331439764,
+            "significant": "False"
+        },
+        "bit_flip": {
+            "noise_type": "bit_flip",
+            "optimal_level": 0.01,
+            "optimal_auc": 0.939822119950325,
+            "f_statistic": 9.385453928955364,
+            "p_value": 2.4316205814945974e-05,
+            "significant": "True"
+        },
+        "depol": {
+            "noise_type": "depol",
+            "optimal_level": 0.01,
+            "optimal_auc": 0.9420848856746293,
+            "f_statistic": 10.314165045632942,
+            "p_value": 1.030677986433058e-05,
+            "significant": "True"
+        }
+    },
+    "Test 4": {
+        "test": "P1 dropout",
+        "optimal_dropout": 0.0,
+        "optimal_auc": 0.9375483965227556,
+        "f_statistic": 45.59151277285711,
+        "p_value": 4.3574067566186975e-21,
+        "significant": "True",
+        "summary": [
+            {
+                "dropout": 0.0,
+                "mean": 0.9375483965227556,
+                "std": 0.004844770056097887,
+                "count": 10,
+                "sem": 0.0015320508117051051
+            },
+            {
+                "dropout": 0.1,
+                "mean": 0.9361165899627439,
+                "std": 0.005454453621313588,
+                "count": 10,
+                "sem": 0.0017248496835104475
+            },
+            {
+                "dropout": 0.2,
+                "mean": 0.9353879026955949,
+                "std": 0.004666578799977887,
+                "count": 10,
+                "sem": 0.0014757017888585436
+            },
+            {
+                "dropout": 0.3,
+                "mean": 0.930566513258821,
+                "std": 0.006411296654385587,
+                "count": 10,
+                "sem": 0.0020274300182875813
+            },
+            {
+                "dropout": 0.4,
+                "mean": 0.932867630944554,
+                "std": 0.005778805530946707,
+                "count": 10,
+                "sem": 0.0018274187632970243
+            },
+            {
+                "dropout": 0.5,
+                "mean": 0.9253433413689823,
+                "std": 0.006621680178442845,
+                "count": 10,
+                "sem": 0.0020939591301069576
+            },
+            {
+                "dropout": 0.9,
+                "mean": 0.8567298560888303,
+                "std": 0.03327750655689998,
+                "count": 10,
+                "sem": 0.010523271557099157
+            }
+        ]
+    },
+    "Test 5": {
+        "test": "Best P2 vs P3",
+        "best_p2_type": "P2b",
+        "p2_mean": 0.9186865366352548,
+        "p2_std": 0.010313958566929952,
+        "p2_n": 10,
+        "p3_mean": 0.665399225655636,
+        "p3_std": 0.07088927739160038,
+        "p3_n": 10,
+        "t_statistic": 11.18109103485296,
+        "p_value": 1.560902337337107e-09,
+        "cohens_d": 5.0003359233089375,
+        "significant": "True"
+    },
+    "Test 6": {
+        "test": "Noise type comparison",
+        "f_statistic": 0.44832549918722286,
+        "p_value": 0.6433656677989916,
+        "significant": "False",
+        "optimal_configs": {
+            "amp_damp": {
+                "optimal_level": 0.03,
+                "mean_auc": 0.9398440353568558
+            },
+            "bit_flip": {
+                "optimal_level": 0.01,
+                "mean_auc": 0.939822119950325
+            },
+            "depol": {
+                "optimal_level": 0.01,
+                "mean_auc": 0.9420848856746293
+            }
+        }
+    },
+    "Test 7": {
+        "test": "Ultimate Showdown",
+        "p1_config": "dropout_0.0",
+        "p1_mean": 0.9375483965227556,
+        "p1_std": 0.004844770056097907,
+        "p1_n": 10,
+        "quantum_type": "P2d",
+        "quantum_config": "depol_0.01",
+        "quantum_mean": 0.9420848856746293,
+        "quantum_std": 0.005205352609104901,
+        "quantum_n": 10,
+        "t_statistic": -2.0173635354711665,
+        "p_value": 0.05882107603102815,
+        "cohens_d": -0.9021924001285675,
+        "significant": "False",
+        "winner": "Quantum"
+    }
+}

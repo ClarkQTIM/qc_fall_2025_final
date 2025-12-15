@@ -1,0 +1,8 @@
+{
+    "dataset": "retinamnist",
+    "final_train_loss": 0.6933020211183107,
+    "best_val_loss": 0.6889420747756958,
+    "epochs_trained": 6,
+    "accuracy": 50.0,
+    "auc": 0.5
+}

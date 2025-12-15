@@ -1,0 +1,68 @@
+================================================================================
+PROBABILITY ANALYSIS (|α|²)
+================================================================================
+
+Class 0 mean probability: 0.001953 ± 0.003497
+Class 1 mean probability: 0.001953 ± 0.003693
+
+Mean per-feature |difference|: 0.000453
+Max per-feature |difference|:  0.007628
+Features with >0.001 diff:     57 / 512
+
+T-test (all probabilities):
+   t-statistic: 0.0000
+   p-value:     1.0000e+00
+
+Kolmogorov-Smirnov test:
+   KS statistic: 0.0061
+   p-value:      3.6063e-01
+
+================================================================================
+AMPLITUDE ANALYSIS (|α|)
+================================================================================
+
+Class 0 mean amplitude: 0.032574 ± 0.024849
+Class 1 mean amplitude: 0.032502 ± 0.024791
+
+Mean per-feature |difference|: 0.004850
+Max per-feature |difference|:  0.026669
+
+================================================================================
+PHASE ANALYSIS (arg(α))
+================================================================================
+
+Class 0 mean phase (circular): -1.3468 rad
+Class 1 mean phase (circular): -1.3806 rad
+
+Mean angular difference: 0.4264 rad
+Max angular difference:  3.1416 rad
+
+================================================================================
+SEPARABILITY METRICS
+================================================================================
+
+Intra-class distance (Class 0): 0.055695
+Intra-class distance (Class 1): 0.056267
+Inter-class distance:            0.058854
+
+Separability ratio (inter/intra): 1.0513
+
+================================================================================
+INTERPRETATION
+================================================================================
+
+⚠️  VQC produces SLIGHTLY DIFFERENT states
+   Classes are weakly separable in quantum feature space.
+   Max difference: 0.007628 (threshold: 0.01 for 'strong')
+   Separability: 1.05 (threshold: 1.5 for 'strong')
+   → VQC encodes SOME class info, but signal is WEAK
+
+   DUAL PROBLEM:
+   1. VQC: Weak encoding (only ~10% of features discriminative)
+   2. MLP: Cannot find weak signal in high-dimensional space
+
+   RECOMMENDATION:
+   • Feature selection: Use only the most discriminative features
+   • Found 57 features with difference >0.001
+   • Try training MLP on ONLY these discriminative features
+   • OR: Increase VQC capacity to create stronger separation

@@ -1,0 +1,8 @@
+{
+    "dataset": "pneumoniamnist",
+    "final_train_loss": 0.3775255848914385,
+    "best_val_loss": 0.266712305985172,
+    "epochs_trained": 14,
+    "accuracy": 80.76923076923077,
+    "auc": 0.9429834173423918
+}

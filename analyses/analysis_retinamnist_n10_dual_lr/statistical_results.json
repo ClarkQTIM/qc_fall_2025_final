@@ -1,0 +1,189 @@
+{
+    "Test 1": {
+        "test_1a": {
+            "test": "P1 vs P3 (no noise)",
+            "p1_config": "dropout_0.0",
+            "p1_mean": 0.8729597107438016,
+            "p1_std": 0.005911254255563963,
+            "p1_n": 10,
+            "p3_mean": 0.7824121900826446,
+            "p3_std": 0.06301079533483678,
+            "p3_n": 10,
+            "t_statistic": 4.524377785028807,
+            "p_value": 0.0002625044020072949,
+            "cohens_d": 2.0233632566428685,
+            "significant": "True"
+        },
+        "test_1b": {
+            "test": "P1 vs P3 (best)",
+            "p1_config": "dropout_0.0",
+            "p1_mean": 0.8729597107438016,
+            "p1_std": 0.005911254255563963,
+            "p1_n": 10,
+            "p3_config": "depol_0.2",
+            "p3_mean": 0.8064307851239669,
+            "p3_std": 0.09258862036714348,
+            "p3_n": 2,
+            "t_statistic": 2.8810705909400873,
+            "p_value": 0.016355493324174984,
+            "cohens_d": 2.2316676835917835,
+            "significant": "True"
+        }
+    },
+    "Test 2": {
+        "test": "P2 variants",
+        "t_statistic": -2.4823669856360184,
+        "p_value": 0.023139933497735146,
+        "significant": "True",
+        "summary": [
+            {
+                "method": "P2a (Probabilities)",
+                "mean": 0.7763946280991736,
+                "std": 0.07939601551167745,
+                "n": 10
+            },
+            {
+                "method": "P2b (Complex Amplitudes)",
+                "mean": 0.8424328512396695,
+                "std": 0.02781059136330058,
+                "n": 10
+            }
+        ]
+    },
+    "Test 3": {
+        "amp_damp": {
+            "noise_type": "amp_damp",
+            "optimal_level": 0.05,
+            "optimal_auc": 0.870235020661157,
+            "f_statistic": 0.5729637070235734,
+            "p_value": 0.7203581675564812,
+            "significant": "False"
+        },
+        "bit_flip": {
+            "noise_type": "bit_flip",
+            "optimal_level": 0.03,
+            "optimal_auc": 0.8674328512396695,
+            "f_statistic": 4.733312538255416,
+            "p_value": 0.001171894041077909,
+            "significant": "True"
+        },
+        "depol": {
+            "noise_type": "depol",
+            "optimal_level": 0.1,
+            "optimal_auc": 0.8695377066115701,
+            "f_statistic": 19.626934928246772,
+            "p_value": 4.309673718763659e-11,
+            "significant": "True"
+        }
+    },
+    "Test 4": {
+        "test": "P1 dropout",
+        "optimal_dropout": 0.0,
+        "optimal_auc": 0.8729597107438016,
+        "f_statistic": 16.633648682776986,
+        "p_value": 2.1860932195244007e-11,
+        "significant": "True",
+        "summary": [
+            {
+                "dropout": 0.0,
+                "mean": 0.8729597107438016,
+                "std": 0.005911254255563953,
+                "count": 10,
+                "sem": 0.0018693027275945152
+            },
+            {
+                "dropout": 0.1,
+                "mean": 0.8695506198347107,
+                "std": 0.007766754765375773,
+                "count": 10,
+                "sem": 0.002456063508655411
+            },
+            {
+                "dropout": 0.2,
+                "mean": 0.8698605371900827,
+                "std": 0.007373439105663568,
+                "count": 10,
+                "sem": 0.0023316861762451816
+            },
+            {
+                "dropout": 0.3,
+                "mean": 0.871978305785124,
+                "std": 0.005408570080277713,
+                "count": 10,
+                "sem": 0.001710340033831731
+            },
+            {
+                "dropout": 0.4,
+                "mean": 0.8688791322314049,
+                "std": 0.007021648778962549,
+                "count": 10,
+                "sem": 0.0022204403071261845
+            },
+            {
+                "dropout": 0.5,
+                "mean": 0.8710614669421487,
+                "std": 0.006850434787034661,
+                "count": 10,
+                "sem": 0.002166297688948004
+            },
+            {
+                "dropout": 0.9,
+                "mean": 0.839269111570248,
+                "std": 0.018108827928994053,
+                "count": 10,
+                "sem": 0.005726514201169111
+            }
+        ]
+    },
+    "Test 5": {
+        "test": "Best P2 vs P3",
+        "best_p2_type": "P2b",
+        "p2_mean": 0.8424328512396695,
+        "p2_std": 0.02781059136330058,
+        "p2_n": 10,
+        "p3_mean": 0.7824121900826446,
+        "p3_std": 0.06301079533483678,
+        "p3_n": 10,
+        "t_statistic": 2.7557389747334446,
+        "p_value": 0.01301199543910747,
+        "cohens_d": 1.2324039351499114,
+        "significant": "True"
+    },
+    "Test 6": {
+        "test": "Noise type comparison",
+        "f_statistic": 0.11106000823805667,
+        "p_value": 0.8952917184125903,
+        "significant": "False",
+        "optimal_configs": {
+            "amp_damp": {
+                "optimal_level": 0.05,
+                "mean_auc": 0.870235020661157
+            },
+            "bit_flip": {
+                "optimal_level": 0.03,
+                "mean_auc": 0.8674328512396695
+            },
+            "depol": {
+                "optimal_level": 0.1,
+                "mean_auc": 0.8695377066115701
+            }
+        }
+    },
+    "Test 7": {
+        "test": "Ultimate Showdown",
+        "p1_config": "dropout_0.0",
+        "p1_mean": 0.8729597107438016,
+        "p1_std": 0.005911254255563963,
+        "p1_n": 10,
+        "quantum_type": "P2d",
+        "quantum_config": "amp_damp_0.05",
+        "quantum_mean": 0.8702350206611571,
+        "quantum_std": 0.0144749046015245,
+        "quantum_n": 10,
+        "t_statistic": 0.5510716435684753,
+        "p_value": 0.5883601839567507,
+        "cohens_d": 0.2464467310983291,
+        "significant": "False",
+        "winner": "Classical"
+    }
+}
